@@ -9,18 +9,10 @@ function addRow() {
     for (var i = 0; i < cells.length; i++) {
       var cell = newRow.insertCell(i);
       cell.appendChild(document.createTextNode(cells[i]));
+      if (firstname == "" || lastname == "" || gender == "" || birthdate == "") {
+        alert("กรุณากรอกข้อมูลให้ครบถ้วน");
+        return false;
+      }
     }
-  }
-
-
-function validateForm() {
-    var firstname = document.forms["myForm"]["firstname"].value;
-    var lastname = document.forms["myForm"]["lastname"].value;
-    var gender = document.forms["myForm"]["gender"].value;
-    var birthdate = document.forms["myForm"]["birthdate"].value;
+    }
   
-    if (firstname == "" || lastname == "" || gender == "" || birthdate == "") {
-      alert("กรุณากรอกข้อมูลให้ครบถ้วน");
-      return false;
-    }
-  }
