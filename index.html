@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>แบบฟอร์ม</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <form id="myForm"  onsubmit=" return validateForm()">
+
+        <h1 class="text" >Insert data</h1>
+        <label for="firstname">ชื่อ:</label><br>
+        <input class="ml" type="text" id="firstname" name="firstname" required><br>
+  
+        <label for="lastname">นามสกุล:</label><br>
+        <input class=" ml" type="text" id="lastname" name="lastname" required><br>
+  
+        <label for="gender">เพศ:</label><br>
+        <select class=" ml" id="gender" name="gender">
+          <option value="male">ชาย</option>
+          <option value="female">หญิง</option>
+          <option value="other">ไม่ระบุ</option>
+        </select><br>
+  
+        <label for="birthdate">วันเกิด:</label><br>
+        <input class="ml" type="date" id="birthdate" name="birthdate"> <br>
+  
+        <button class="ml" type="button" onclick="addRow()">Add</button>
+      </form>
+
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th>ชื่อ</th>
+          <th>นามสกุล</th>
+          <th>เพศ</th>
+          <th>วันเกิด</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+   <script src="javascript.js"></script> 
+  </body>
+</html>
